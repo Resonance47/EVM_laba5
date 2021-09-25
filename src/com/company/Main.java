@@ -275,6 +275,7 @@ class Piano extends JComponent implements KeyListener, MouseListener
 	Piano(MidiChannel channel) throws IOException
 	{
 		this._image = ImageIO.read(new File("C:\\java\\1.jpg"));
+		//this._druz = ImageIO.read(new File("C:\\java\\3.png"));
 		this._druz = ImageIO.read(new File("C:\\java\\2.jpg"));
 		//addKeyListener(this);
 		for (int i = 0; i < 131; i++)
@@ -314,15 +315,15 @@ class Piano extends JComponent implements KeyListener, MouseListener
 
 	public void setPedal(int status)
 	{
-		pedal = status;
-		if(pedal == 0)
+		if(pedal == 1 && status == 0)
 		{
 			System.out.println("Pedal off!");
 		}
-		else
+		else if (pedal == 0 && status == 1)
 		{
 			System.out.println("Pedal on!");
 		}
+		pedal = status;
 	}
 
 	private void play(int note, int vol)
@@ -396,7 +397,7 @@ class Piano extends JComponent implements KeyListener, MouseListener
 		} else
 		{
 			note = codes[note] + shift;
-			play(note, 120);
+			play(note, vol);
 		}
 
 	}
@@ -427,7 +428,7 @@ class Piano extends JComponent implements KeyListener, MouseListener
 	@Override
 	public void mousePressed(MouseEvent e)
 	{
-		play(mouse_note(e.getX(), e.getY()), 100);
+		play(mouse_note(e.getX(), e.getY()), vol);
 	}
 
 	@Override
