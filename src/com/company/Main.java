@@ -549,42 +549,6 @@ class Melody
 		piano.clear();
 		piano.play_accord(67, 62, 58, 43);
 		Thread.sleep(2 * d1);
-
-
-/*
-		piano.stop_accord(67, 62, 58, 43);
-		piano.play_accord(79, 70, 74, 43);
-		Thread.sleep(d1);
-		piano.stop_accord(79, 70, 74, 43);
-		piano.play_accord(67, 67, 67, 43);
-		Thread.sleep(d2);
-		piano.stop_accord(67, 67, 67, 67);
-		piano.play_accord(67, 67, 67, 67);
-		Thread.sleep(d3);
-		piano.stop_accord(67, 67, 67, 43);
-		piano.play_accord(79, 70, 74, 43);
-		Thread.sleep(d1);
-		piano.stop_accord(79, 70, 74, 43);
-		piano.play_accord(78, 70, 74, 43);
-		Thread.sleep(d2);
-		piano.stop_accord(78, 78, 78, 78);
-		piano.play_accord(78, 78, 78, 78);
-		Thread.sleep(d3);
-		piano.stop_accord(78, 78, 78, 43);
-		piano.stop_accord(78, 70, 74, 74);
-		piano.play_accord(68, 73, 76, 36);
-		Thread.sleep(d3);
-		piano.stop_accord(68, 73, 76, 76);
-		piano.play_accord(75, 75, 75, 75);
-		Thread.sleep(d3);
-		piano.stop_accord(75, 75, 75, 75);
-		piano.play_accord(68, 73, 76, 76);
-		Thread.sleep(d2);
-		piano.stop_accord(68, 73, 76, 36);
-		piano.play_accord(36, 36, 36, 36);
-		Thread.sleep(d2);*/
-
-
 	}
 }
 
@@ -903,7 +867,7 @@ public class Main
 		JFrame frame = new JFrame();
 		frame.setSize(1520, 600);//2000 x 340
 		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-		//frame.setTitle("Analysis");
+		//frame.setResizable(false);
 		frame.setLocation(5, 5);
 		frame.setTitle("Внимание, пеонина!");
 		//MYP myp = new MYP();
